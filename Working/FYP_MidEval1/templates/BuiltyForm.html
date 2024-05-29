@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>BUILTY FORM</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="../static/ForLoginPage/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/css/BuiltyForm.css">
+<!--===============================================================================================-->
+    <style>
+        .custom-dropdown {
+            background-color: #f2f2f2; /* Change this to the desired background color */
+            color: #333; /* Change this to the desired text color */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .custom-dropdown:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Optional: Add some animation */
+        .custom-dropdown:hover {
+            background-color: #e0e0e0; /* Change this to the desired hover background color */
+            transition: background-color 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+	
+	<div class="limiter">
+        <div class="container-login100" style="background-image: url('../static/ForLoginPage/images/ReconstructingTruck.gif');">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form" method = 'POST' action = '/BuiltyForm/{{user_id}}'>
+                    <span class="login100-form-logo">
+                        <i class="zmdi zmdi-landscape"></i>
+                    </span>
+
+                    <span class="login100-form-title p-b-34 p-t-27">
+                        Builty Form Details
+                    </span>
+                    
+                        <div class="wrap-input100 validate-input" data-validate="Builty No">
+                            <input class="input100" type="text" name="Builty_No" placeholder="Builty No" required>
+                            <span class="focus-input100"></span>
+                        </div>
+                    
+                        <div class="wrap-input100 validate-input" data-validate="Vehicle No">
+                            <input class="input100" type="text" name="Vehicle_No" placeholder="Vehicle No" pattern="[A-Za-z]{1,3}-\d{1,4}" title="Please enter a vehicle number in the format AZ-123" required>
+                            <span class="focus-input100"></span>
+                        </div>
+                        
+                        <div class="wrap-input100 validate-input" data-validate="Date">
+                            <input class="input100" type="date" name="Date" placeholder="Date" required>
+                            <span class="focus-input100"></span>
+                        </div>
+                    
+                        <div class="wrap-input100 validate-input" data-validate="PickUp Point">
+                            <input class="input100" type="text" name="PickUp_Point" placeholder="PickUp Point" required>
+                            <span class="focus-input100"></span>
+                        </div>
+                    
+                        <div class="wrap-input100 validate-input" data-validate="Destination">
+                            <input class="input100" type="text" name="Destination" placeholder="Destination" required>
+                            <span class="focus-input100"></span>
+                        </div>
+                    
+                        <div class="wrap-input100 validate-input" data-validate="Sender Name">
+                            <input class="input100" type="text" name="Sender_Name" placeholder="Sender Name" required>
+                            <span class="focus-input100"></span>
+                        </div>
+                    
+                        <div class="wrap-input100 validate-input" data-validate="Receiver Name">
+                            <input class="input100" type="text" name="Receiver_Name" placeholder="Receiver Name" required>
+                            <span class="focus-input100"></span>
+                        </div>
+                    
+                        <div class="wrap-input100 validate-input" data-validate="Driver Name">
+                            <input class="input100" type="text" name="Driver_Name" placeholder="Driver Name" required>
+                            <span class="focus-input100"></span>
+                        </div>
+                    
+                        <div class="wrap-input100 validate-input" data-validate="Driver Number">
+                            <input class="input100" type="text" name="Driver_Number" placeholder="Driver Number" pattern="^\+92\d{10}$" title="Please enter a valid contact number in the format +92XXXXXXXXXX" required>
+                            <span class="focus-input100"></span>
+                        </div>
+                    
+                        <div class="wrap-input100 validate-input" data-validate="Freight Decided">
+                            <input class="input100" type="number" name="FreightDecided" placeholder="Freight Decided (PKR)" required>
+                            <span class="focus-input100"></span>
+                            <div class="checkbox-container">
+                                <input type="checkbox" id="paid" name="paid" class="checkbox-input">
+                                <label for="paid" class="checkbox-label">Paid</label>
+                            </div>
+                        </div>
+                    
+                        <div class="wrap-input100 validate-input" data-validate="Goods Description">
+                            <input class="input100" type="text" name="Goods" placeholder="Goods Description" required>
+                            <span class="focus-input100"></span>
+                        </div>
+                    
+                        
+
+                  
+                    <br>
+                    <a class="container-login100-form-btn">
+                        <button class="login100-form-btn" href='/TransporterInsideWebsite/{{user_id}}'>
+                            Submit
+                        </button>
+                    </a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="dropDownSelect1"></div>
+    
+	
+<!--===============================================================================================-->
+	<script src="../static/ForLoginPage/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/ForLoginPage/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/ForLoginPage/vendor/bootstrap/js/popper.js"></script>
+	<script src="../static/ForLoginPage/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/ForLoginPage/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/ForLoginPage/vendor/daterangepicker/moment.min.js"></script>
+	<script src="../static/ForLoginPage/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/ForLoginPage/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/ForLoginPage/js/main.js"></script>
+
+</body>
+</html>

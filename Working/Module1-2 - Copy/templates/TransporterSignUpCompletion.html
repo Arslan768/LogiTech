@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TRANSPORTER SIGN UP PAGE</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="../static/ForLoginPage/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/ForLoginPage/css/main.css">
+<!--===============================================================================================-->
+    <style>
+        .custom-dropdown {
+            background-color: #f2f2f2; /* Change this to the desired background color */
+            color: #333; /* Change this to the desired text color */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .custom-dropdown:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Optional: Add some animation */
+        .custom-dropdown:hover {
+            background-color: #e0e0e0; /* Change this to the desired hover background color */
+            transition: background-color 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+	
+	<div class="limiter">
+        <div class="container-login100" style="background-image: url('../static/ForLoginPage/images/ReconstructingTruck.gif');">
+            <div class="wrap-login100">
+                <form class="login100-form validate-form" method="POST" action = '/TransporterSignUp/{{ user_id }}'>
+                    {{ form.hidden_tag() }}
+                    <span class="login100-form-logo">
+                        <i class="zmdi zmdi-landscape"></i>
+                    </span>
+
+                    <span class="login100-form-title p-b-34 p-t-27">
+                        COMPLETE SIGN UP
+                    </span>
+                    
+                    <div class="wrap-input100 validate-input" data-validate="Enter Name">
+                        <input class="input100" type="number" name="user_id" placeholder="{{ user_id }}" value="{{ user_id }}" readonly>
+                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                    </div>
+
+                    
+                    <div class="wrap-input100 validate-input" data-validate="Enter Name">
+                        <input class="input100" type="text" name="transporter_name" placeholder="Your Name">
+                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                        {% for error in form.transporter_name.errors %}
+                            <span class="text-danger">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+
+
+                    <div class="wrap-input100 validate-input" data-validate="Enter Contact">
+                        <input class="input100" type="tel" name="contact_number" placeholder="+92XXXXXXXXXX">
+                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                        {% for error in form.contact_number.errors %}
+                            <span class="text-danger">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="wrap-input100 validate-input" data-validate="Enter Address">
+                        <input class="input100" type="address" name="address" placeholder="Address">
+                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                        {% for error in form.address.errors %}
+                            <span class="text-danger">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+<!-- 
+                    <div class="contact100-form-checkbox">
+                        <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                        <label class="label-checkbox100" for="ckb1">
+                            Remember me
+                        </label>
+                    </div> -->
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            COMPLETE YOUR SIGN UP
+                        </button>
+                    </div>
+
+                    <div class="text-center p-t-90">
+                        <a class="txt1">
+                            HAVE A GOOD DAY
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="dropDownSelect1"></div>
+    
+	
+<!--===============================================================================================-->
+	<script src="../static/ForLoginPage/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/ForLoginPage/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/ForLoginPage/vendor/bootstrap/js/popper.js"></script>
+	<script src="../static/ForLoginPage/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/ForLoginPage/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/ForLoginPage/vendor/daterangepicker/moment.min.js"></script>
+	<script src="../static/ForLoginPage/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/ForLoginPage/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/ForLoginPage/js/main.js"></script>
+
+</body>
+</html>

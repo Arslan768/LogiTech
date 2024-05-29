@@ -1,0 +1,4 @@
+1) I want the user to login to my website. Based on the user role, the user will be shifted to a different page
+
+	a) When the user first signs up, he/she will be urged to complete his profile. Like what he/she wants to signup as.
+	b) If user profile is completed, a condition will be placed on the user role to make sure flutterflow will display the relevant pages.

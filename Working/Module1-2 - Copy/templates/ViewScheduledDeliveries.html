@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduled Deliveries</title>
+    <link rel="stylesheet" href="../static/InsideWebsite5/assets/css/ViewDeliveries.css">
+</head>
+<body>
+    <h1>Scheduled Deliveries</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Pickup Location</th>
+                <th>Destination</th>
+                <th>Proposed Amount</th>
+                <th>Industrialist Name</th>
+                <th>Contact Number</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in my_table %}
+                <tr>
+                    <td>{{ data.id }}</td>
+                    <td>{{ data.pickup_location }}</td>
+                    <td>{{ data.destination }}</td>
+                    <td>{{ data.proposed_amount }}</td>
+                    <td>{{ data.industrialist_name }}</td>
+                    <td>{{ data.contact_number }}</td>
+                    <td>{{ data.email }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
